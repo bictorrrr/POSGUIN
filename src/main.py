@@ -29,4 +29,4 @@ def main(page: ft.Page):
     page.on_route_change = route_change
     page.go(page.route)  
 
-ft.app(target=main, assets_dir="assets", view=ft.WEB_BROWSER)
+ft.app(target=main, assets_dir="assets", view=ft.WEB_BROWSER, host="0.0.0.0", port=5000)

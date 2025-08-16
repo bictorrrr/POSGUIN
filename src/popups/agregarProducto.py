@@ -6,7 +6,6 @@ def crear_formulario_agregar_producto(page: ft.Page):
     tf_id = ft.TextField(label="ID del producto", value="AUTOGENERADO", read_only=True, expand=1)
     tf_nombre = ft.TextField(label="Nombre del producto *", expand=True)
     tf_codigo = ft.TextField(label="Código", hint_text="Escanee el codigo...", autofocus=True, expand=1)
-
     cb_categoria = ft.Dropdown(label="Categoría", options=[ft.dropdown.Option("Bebidas"), ft.dropdown.Option("Alimentos")], expand=True)
     cb_proveedor = ft.Dropdown(label="Proveedor", options=[ft.dropdown.Option("Proveedor 1"), ft.dropdown.Option("Proveedor 2")], expand=True)
 
@@ -28,7 +27,7 @@ def crear_formulario_agregar_producto(page: ft.Page):
             
         }
 
-    form = ft.BottomSheet(
+    dialog = ft.BottomSheet(
         content=ft.Container(
             ft.Column([
             ft.Row([
@@ -54,13 +53,13 @@ def crear_formulario_agregar_producto(page: ft.Page):
             ]),
             ft.TextButton("Cancelar", on_click=lambda e, page=page: page.close(form))
             
-        ], expand=True), padding=10
-        ), size_constraints=ft.BoxConstraints( max_width=500)
+        ], expand=True), padding=10, width=600
+        ), size_constraints=ft.BoxConstraints( min_width=1000)
         
     )
 
     # Crear el diálogo
-    dialog = ft.AlertDialog(
+    form = ft.AlertDialog(
         modal=True,
         title=ft.Text("Agregar nuevo producto"),
         content=ft.Container(
@@ -68,31 +67,29 @@ def crear_formulario_agregar_producto(page: ft.Page):
             ft.Row([
                 tf_id, tf_codigo
             ]),
+            ft.Divider(height=10, visible=True),
             ft.Row([
                 tf_nombre   
             ]),
+            ft.Divider(height=10, visible=True),
             ft.Row([
-                 cb_categoria
+                 cb_categoria, c_stock, c_stock_minimo
             ]),
+            ft.Divider(height=10, visible=True),
             ft.Row([
-                cb_proveedor
+                cb_proveedor, c_precio_compra, c_precio_venta
             ]),
-            ft.Row([
-                c_stock, c_stock_minimo
-            ]),
-            ft.Row([
-                c_precio_compra, c_precio_venta
-            ]),
+            ft.Divider(height=10, visible=True),
             ft.Row([
                 c_precio_venta_mayor, tf_unidad
             ])
             
-        ],scroll="adaptive"),
+        ],scroll="adaptive"), width=700
         ),
         actions=[
-            ft.TextButton("Cancelar", on_click=lambda e, page=page: page.close(dialog)),
+            ft.TextButton("Cancelar", on_click=lambda e, page=page: page.close(form)),
             ft.ElevatedButton("Guardar", on_click=guardar_click),
-        ],
+        ]
     )
 
     return form

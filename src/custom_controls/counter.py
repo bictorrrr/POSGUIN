@@ -4,7 +4,7 @@ def contador_visual(valor_inicial=1, on_change=None, nombre = "contador", soloLe
     campo = ft.TextField(
         label=nombre,
         value=str(valor_inicial),
-        width=60,
+        width=100,
         text_align=ft.TextAlign.CENTER,
         read_only=soloLectura,
     )

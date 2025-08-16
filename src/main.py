@@ -10,9 +10,9 @@ def main(page: ft.Page):
     page.theme_mode = ft.ThemeMode.LIGHT
     page.window.maximized = True
 
+    #Definicion de rutas para cambiar entre vistas
     def route_change(route):
         page.views.clear()
-
         match page.route:
             case routes.MAIN:
                 page.views.append(homeVista(page))

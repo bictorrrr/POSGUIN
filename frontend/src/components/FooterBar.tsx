@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from "react";
-import {modules} from "./modules";
-import HomeIcon from "./icons/HomeIcon";
 import UserIcon from "./icons/UserIcon";
 import ClockIcon from "./icons/ClockIcon";
 import CalendarIcon from "./icons/CalendarIcon";
@@ -8,7 +6,6 @@ import BellIcon from "./icons/BellIcon";
 import "./CSS/Footerbar.css";
 
 interface FooterbarProps {
-    activeModule: string,
     currentTime?: Date,
     notifications?: number
 }
@@ -28,11 +25,9 @@ const formatDate = (date: Date) =>
         day: "numeric",
     });
 
-const Footerbar: React.FC<FooterbarProps> = ({activeModule}) => {
+const Footerbar: React.FC<FooterbarProps> = () => {
     const [currentTime, setCurrentTime] = useState(new Date());
     const [notifications] = useState(3);
-    const module = modules[activeModule];
-    const Icon = module?.icon || HomeIcon;
 
     // Actualiza hora cada segundo
     useEffect(() => {

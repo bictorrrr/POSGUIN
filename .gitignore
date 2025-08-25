@@ -1,0 +1,13 @@
+# Ignore IDE files
+.idea/
+*.iml
+
+# Node modules
+node_modules/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Database data
+docker/postgres_data/

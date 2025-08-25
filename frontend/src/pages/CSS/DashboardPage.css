@@ -1,10 +1,12 @@
 /* DashboardPage.css */
+
 .Dash {
     display: flex;       /* hace que Sidebar y contenido estén lado a lado */
     flex-direction: row; /* lateral horizontal */
     width: 100vw;
     height: 100vh;
-    background-color: #f3f4f6; /* opcional */
+    background: url("/src/assets/dashboard.png") no-repeat center center fixed;
+    background-size: cover;
 }
 
 .Dashcontent {
@@ -13,3 +15,5 @@
     flex-direction: column; /* Topbar arriba, ContentArea y FooterBar abajo */
     min-height: 0;          /* importante para que overflow-auto funcione en ContentArea */
 }
+
+

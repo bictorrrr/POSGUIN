@@ -1,7 +1,12 @@
 .footerbar {
-    background-color: #fff;
-    border-top: 1px solid #e5e7eb; /* gray-200 */
+    background: rgba(255,255,255,0.06);           /* glass claro para contraste */
+    border: 1px solid rgba(255,255,255, .3);
     padding: 0.75rem 1.5rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #eaf0ff;
+    border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;            /* sutil redondeo superior */
+    margin: 10px;
 }
 
 .footerbar-content {
@@ -21,37 +26,36 @@
 .footerbar-divider {
     width: 1px;
     height: 2rem;
-    background-color: #d1d5db; /* gray-300 */
+    background: rgba(255,255,255,0.12);
+    border-radius: 9999px;
 }
 
 /* Usuario */
 .user-avatar {
-    width: 2rem;
-    height: 2rem;
-    background-color: #2563eb; /* blue-600 */
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.12);
     border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.user-info {
-    display: flex;
-    flex-direction: column;
-}
+.user-info { display: flex; flex-direction: column; }
 .user-name {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #1f2937; /* gray-800 */
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
 }
 .user-role {
     font-size: 0.75rem;
-    color: #6b7280; /* gray-500 */
+    color: rgba(229,234,243,0.7);
 }
 
-/* Fecha y hora */
+/* Fecha y hora estilo “píldora” como en login */
 .footerbar-datetime {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
 }
 .footerbar-date,
@@ -59,16 +63,21 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 9999px;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.08);
 }
 .footerbar-date span {
-    font-size: 0.875rem;
-    color: #4b5563; /* gray-600 */
-    text-transform: capitalize;
+    font-size: 0.8rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 .footerbar-time span {
-    font-size: 0.875rem;
-    font-family: monospace;
-    color: #1f2937; /* gray-800 */
+    font-size: 0.85rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    color: #ffffff;
 }
 
 /* Notificaciones */
@@ -77,22 +86,22 @@
     align-items: center;
     gap: 0.5rem;
 }
-.bell-icon {
-    position: relative;
-}
+.bell-icon { position: relative; color: #eaf0ff; }
 .badge {
     position: absolute;
     top: -0.25rem;
     right: -0.25rem;
-    width: 0.75rem;
-    height: 0.75rem;
-    background-color: #ef4444; /* red-500 */
+    min-width: 0.9rem;
+    height: 0.9rem;
+    padding: 0 2px;
+    background: #ef4444;
     border-radius: 9999px;
     font-size: 0.625rem;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid rgba(255,255,255,0.6);
 }
 
 /* Estado sistema */
@@ -102,12 +111,13 @@
     gap: 0.5rem;
 }
 .status-dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    background-color: #22c55e; /* green-500 */
+    width: 0.6rem;
+    height: 0.6rem;
+    background: #22c55e;
     border-radius: 9999px;
+    box-shadow: 0 0 0 3px rgba(34,197,94,0.20);
 }
 .system-status span {
     font-size: 0.875rem;
-    color: #4b5563; /* gray-600 */
+    color: #d7def0;
 }

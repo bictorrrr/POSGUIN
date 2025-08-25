@@ -1,6 +1,6 @@
 # POSGUIN
 
-POSGUIN es un sistema de punto de venta en desarrollo. El proyecto combina un backend construido con [FastAPI](https://fastapi.tiangolo.com/) y un frontend en [React](https://react.dev/) con [Vite](https://vitejs.dev/).
+POSGUIN es un sistema de punto de venta e inventario en desarrollo. El proyecto combina un backend construido con [FastAPI](https://fastapi.tiangolo.com/) y un frontend en [React](https://react.dev/) con [Vite](https://vitejs.dev/).
 
 ## Instalación
 

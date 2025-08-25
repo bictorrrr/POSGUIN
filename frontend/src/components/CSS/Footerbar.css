@@ -1,0 +1,113 @@
+.footerbar {
+    background-color: #fff;
+    border-top: 1px solid #e5e7eb; /* gray-200 */
+    padding: 0.75rem 1.5rem;
+}
+
+.footerbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Secciones */
+.footerbar-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Divider */
+.footerbar-divider {
+    width: 1px;
+    height: 2rem;
+    background-color: #d1d5db; /* gray-300 */
+}
+
+/* Usuario */
+.user-avatar {
+    width: 2rem;
+    height: 2rem;
+    background-color: #2563eb; /* blue-600 */
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+.user-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1f2937; /* gray-800 */
+}
+.user-role {
+    font-size: 0.75rem;
+    color: #6b7280; /* gray-500 */
+}
+
+/* Fecha y hora */
+.footerbar-datetime {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.footerbar-date,
+.footerbar-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.footerbar-date span {
+    font-size: 0.875rem;
+    color: #4b5563; /* gray-600 */
+    text-transform: capitalize;
+}
+.footerbar-time span {
+    font-size: 0.875rem;
+    font-family: monospace;
+    color: #1f2937; /* gray-800 */
+}
+
+/* Notificaciones */
+.notifications {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.bell-icon {
+    position: relative;
+}
+.badge {
+    position: absolute;
+    top: -0.25rem;
+    right: -0.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #ef4444; /* red-500 */
+    border-radius: 9999px;
+    font-size: 0.625rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estado sistema */
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.status-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #22c55e; /* green-500 */
+    border-radius: 9999px;
+}
+.system-status span {
+    font-size: 0.875rem;
+    color: #4b5563; /* gray-600 */
+}

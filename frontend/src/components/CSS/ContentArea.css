@@ -1,0 +1,85 @@
+/* Contenedor principal */
+.content-area {
+    flex: 1;
+    padding: 1.5rem; /* p-6 */
+    overflow: auto;
+}
+
+/* Tarjeta blanca principal */
+.content-area__container {
+    background-color: white;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); /* shadow-sm */
+    padding: 2rem; /* p-8 */
+    height: 100%;
+    text-align: center;
+}
+
+/* Header de bienvenida */
+.content-area__header {
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+/* Icono grande circular */
+.content-area__icon-wrapper {
+    width: 4rem; /* w-16 */
+    height: 4rem; /* h-16 */
+    background-color: #eff6ff; /* bg-blue-100 */
+    border-radius: 9999px; /* rounded-full */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto; /* mx-auto mb-4 */
+}
+
+.content-area__icon {
+    color: #2563eb; /* text-blue-600 */
+}
+
+/* Título principal */
+.content-area__title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+/* Subtítulo */
+.content-area__subtitle {
+    color: #4b5563; /* text-gray-600 */
+}
+
+/* Grid de cards */
+.content-area__cards {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0,1fr));
+    gap: 1.5rem; /* gap-6 */
+    margin-top: 2rem; /* mt-8 */
+}
+
+@media (min-width: 768px) {
+    .content-area__cards {
+        grid-template-columns: repeat(3, minmax(0,1fr)); /* md:grid-cols-3 */
+    }
+}
+
+/* Tarjetas individuales */
+.content-area__card {
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.75rem; /* rounded-xl */
+    background-image: linear-gradient(to bottom right, #eff6ff, #e0e7ff); /* from-blue-50 to-indigo-100 */
+}
+
+/* Card título */
+.content-area__card-title {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+/* Card contenido */
+.content-area__card-text {
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* text-gray-600 */
+}

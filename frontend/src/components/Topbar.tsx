@@ -10,7 +10,6 @@ interface TopbarProps {
 
 const Topbar: React.FC<TopbarProps> = ({ activeModule, activeSub, onSubSelected }) => {
     const module = modules[activeModule as keyof typeof modules];
-
     return (
         <header className="topbar">
             <div className="topbar-content">

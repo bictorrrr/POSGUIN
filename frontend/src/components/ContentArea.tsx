@@ -2,7 +2,7 @@ import React from "react";
 import { modules } from "./modules";
 import HomeIcon from "./icons/HomeIcon";
 import "./CSS/ContentArea.css";
-import {InventarioProductosPage} from "../layouts/inventory";
+import {InventarioProductosPage, InventarioCategoriasPage} from "../layouts/inventory";
 
 interface ContentAreaProps {
     activeModule: string;
@@ -12,6 +12,7 @@ interface ContentAreaProps {
 const contentByModule: Record<string, Record<string, React.ReactNode>> = {
     inventario:{
         Productos: <InventarioProductosPage />,
+        Categorias: <InventarioCategoriasPage/>,
     },
 };
 

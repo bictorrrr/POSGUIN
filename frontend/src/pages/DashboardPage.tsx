@@ -8,6 +8,7 @@ import "./CSS/DashboardPage.css"
 function DashboardPage() {
     const [sidebarExpanded, setSidebarExpanded] = useState(true);
     const [activeModule, setActiveModule] = useState("dashboard");
+    const [activeSub, setActiveSub] = useState<string | null>(null);
     const [currentTime, setCurrentTime] = useState(new Date());
     const [notifications] = useState(3);
 
@@ -22,11 +23,14 @@ function DashboardPage() {
                 expanded={sidebarExpanded}
                 activeModule={activeModule}
                 onToggle={() => setSidebarExpanded(!sidebarExpanded)}
-                onSelect={setActiveModule}
+                onSelect={(mod) => {
+                    setActiveModule(mod);
+                    setActiveSub(null);
+                }}
             />
             <div className="Dashcontent">
-                <Topbar activeModule={activeModule} />
-                <ContentArea activeModule={activeModule} />
+                <Topbar activeModule={activeModule} activeSub={activeSub} onSubSelected={setActiveSub} />
+                <ContentArea activeModule={activeModule} activeSub={activeSub} />
                 <FooterBar currentTime={currentTime} notifications={notifications} />
             </div>
         </div>

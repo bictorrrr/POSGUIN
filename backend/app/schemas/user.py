@@ -1,4 +1,4 @@
-# backend/app/schemas/user.py
+# app/schemas/user.py (Pydantic v2)
 from pydantic import BaseModel
 
 class UserCreate(BaseModel):
@@ -10,5 +10,4 @@ class UserRead(BaseModel):
     username: str
     email: str
 
-    class Config:
-        orm_mode = True
+    model_config = {"from_attributes": True}

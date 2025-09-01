@@ -1,0 +1,17 @@
+/* src/components/CSS/Table.css */
+.card-glass {
+    padding: 14px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+}
+
+.pg-table { width: 100%; border-collapse: separate; border-spacing: 0; color: #e5e7eb; font-size: 14px; }
+.pg-table thead th { padding: 10px 12px; background: rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.12); position: sticky; top: 0; }
+.pg-table tbody td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.pg-table tbody tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
+.pg-table tbody tr:hover td { background: rgba(99,102,241,0.10); transition: background .15s; }
+.pg-table thead th:first-child, .pg-table tbody td:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px; }
+.pg-table thead th:last-child, .pg-table tbody td:last-child   { border-top-right-radius: 10px; border-bottom-right-radius: 10px; }

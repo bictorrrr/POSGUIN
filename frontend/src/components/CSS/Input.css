@@ -1,5 +1,5 @@
 .input {
-    padding: 8px;
+    padding: 8px 12px;
     border-radius: 6px;
     border: 1px solid #ccc;
     outline: none;
@@ -15,10 +15,26 @@
 .input.modal {
     background: rgba(255, 255, 255, 0.3);
     color: #000;
-    border: #000
+    border: 1px solid #000;
 }
 
 .input.highlight {
     border: 2px solid #4a60ff;
     background: #eef2ff;
+}
+
+.input.search {
+    width: 70%;
+    height: 40px;
+    border: 1px solid #d1d5db;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.input.search:focus {
+    border-color: #2563eb; /* azul */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }

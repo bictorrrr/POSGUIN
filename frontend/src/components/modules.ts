@@ -15,7 +15,7 @@ export const modules = {
     inventario: {
         name: 'Inventario',
         icon: PackageIcon,
-        subcategories: ['Productos', 'Categorías', 'Operaciones', 'Reportes', 'Stock Mínimo']
+        subcategories: ['Productos', 'Categorias', 'Operaciones', 'Reportes', 'Stock Mínimo']
     },
     ventas: {
         name: 'Ventas',
